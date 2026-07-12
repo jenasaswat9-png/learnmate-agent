@@ -169,10 +169,9 @@ def main():
 
     # ── Sidebar Inputs ───────────────────────────────────────────────────────
     with st.sidebar:
-        st.image(
-            "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
-            width=100,
-        )
+        st.markdown(
+        "![IBM Watsonx](https://img.shields.io/badge/Powered%20by-IBM%20Watsonx.ai-0F62FE?style=for-the-badge)", 
+        unsafe_allow_html=True)
         st.title("🛠️ Configure Your Path")
         st.markdown("---")
 
