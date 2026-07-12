@@ -1,4 +1,3 @@
-```markdown
 # 🎓 LearnMate: AI-Powered Course Pathway Generator
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
@@ -25,11 +24,7 @@ graph TD
     style B fill:#FF4B4B,stroke:#fff,stroke-width:2px,color:#fff
     style C fill:#0F62FE,stroke:#fff,stroke-width:2px,color:#fff
     style D fill:#262626,stroke:#fff,stroke-width:2px,color:#fff
-
 ```
-
----
-
 ## ✨ Core Features
 
 * **📊 Skill Gap Analysis:** Automatically cross-references existing skills against target career requirements to identify high-priority learning gaps.
@@ -117,7 +112,3 @@ IBM_URL="your_url"
 ## 👨‍💻 Author
 
 **Saswat Jena** *M.Tech in Artificial Intelligence & Data Science*
-
-```
-
-```
