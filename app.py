@@ -84,7 +84,7 @@ def get_model() -> ModelInference:
         api_client=client,
         params={
             GenParams.MAX_NEW_TOKENS: 3000,
-            GenParams.TEMPERATURE:    0.7,
+            GenParams.TEMPERATURE:    0.1,
             GenParams.TOP_P:          0.95,
             GenParams.REPETITION_PENALTY: 1.1,
         },
@@ -105,10 +105,14 @@ def build_user_prompt(career: str, level: str, skills: str, hours: int) -> str:
 
 def generate_roadmap(career, level, skills, hours):
     model = get_model()
+    
+    # BRUTE FORCE FIX: Combine system instructions and user profile into one single message
+    combined_prompt = f"{AGENT_INSTRUCTIONS}\n\n{build_user_prompt(career, level, skills, hours)}"
+    
     messages = [
-        {"role": "system", "content": AGENT_INSTRUCTIONS},
-        {"role": "user",   "content": build_user_prompt(career, level, skills, hours)},
+        {"role": "user", "content": combined_prompt},
     ]
+    
     response = model.chat(messages=messages)
     return response["choices"][0]["message"]["content"]
 
