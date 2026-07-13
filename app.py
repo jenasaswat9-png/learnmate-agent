@@ -19,8 +19,6 @@ IBM_URL        = os.getenv("IBM_URL", "https://au-syd.ml.cloud.ibm.com")
 
 # ── Agent System Prompt ───────────────────────────────────────────────────────
 AGENT_INSTRUCTIONS = """
-# ── Agent System Prompt ───────────────────────────────────────────────────────
-AGENT_INSTRUCTIONS = """
 You are LearnMate, an elite technical academic coach. Your sole function is to output a strict, highly personalized learning roadmap in Markdown format.
 
 CRITICAL RULES - YOU MUST OBEY:
@@ -55,7 +53,6 @@ REQUIRED MARKDOWN STRUCTURE:
 
 ## 💡 Pro Tips from Your Coach
 <3-5 actionable tips>
-"""
 """
 
 # ── Watsonx Client ────────────────────────────────────────────────────────────
